@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h2>Employee List</h2>
+
+  <a class="btn btn-primary mb-3" routerLink="/employee">
+    Add Employee
+  </a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of birth</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Gender</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees$ | async">
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.dateOfBirth | date:'d/MMM/y' }}</td>
+        <td>{{ emp.city }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>{{ emp.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="(employees$ | async)?.length === 0">
+    No employees found.
+  </p>
+</div>
