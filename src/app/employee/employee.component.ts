@@ -104,7 +104,8 @@ export class EmployeeComponent {
 
       await this.router.navigate(['/employees']);
     } catch (error) {
-      console.error('Failed to save employee:', error);
-    }
+  console.error('Failed to save employee:', error);
+  alert('Failed to save employee. Please try again.');
+}
   }
 }
