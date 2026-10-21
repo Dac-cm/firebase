@@ -1,4 +1,4 @@
-# SEG3502 — Laboratoire 5 — Code de départ
+# SEG3502 — Laboratoire 5 — Persistance et Authentification avec Firebase
 
 Ce dossier contient l'application **Employee** de départ pour le laboratoire 5.
 
